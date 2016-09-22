@@ -31,14 +31,9 @@ var articles = {
     */
 
 var plant = {
-title : 'Plant', 
+title : 'Plant',
 heading : 'Shree balaji Cement Products',
-content : 
-		`
-		Hi! Welcome to Shree balaji cement products	. 
-		All  construction materials are avalible at best rate.
-
-		`
+content : 'Hi! Welcome to Shree balaji cement products	.  All  construction materials are avalible at best rate.',
 }
 
 
@@ -46,24 +41,15 @@ content :
 var dairy = {
 title : 'dairy' , 
 heading : 'Shree balaji dairy Products', 
-content : 
-		`
-		Hi! Welcome to Shree balaji dairy products	. 
-		All dairy products are avalible at best rate.
-
-		`
+content : 'Hi! Welcome to Shree balaji dairy products	. All dairy products are avalible at best rate.',
 }
 
 var dairy = {
 title : 'tutor' , 
 heading : 'Shree balaji computer center', 
-content : 
-		`
-		Hi! Welcome to Shree balaji computer center	. 
-		All educational solutions are avalible at best rate.
+content : 'Hi! Welcome to Shree balaji computer center	.  All educational solutions are avalible at best rate.'
 
-		`
-}
+		}
 
 
 function CreateTemplate (data) {
