@@ -7,44 +7,40 @@ app.use(morgan('combined'));
 
 
 var articles = { 
-    'plant' : { title : 'Plant' ; 
-			    heading : 'plant heading'; 
-			    content : 
-			    `
-			    Hi! Welcome to plant	. 
-			    All  construction materials are avalible at best rate.
-		    	`
-			    ; } ,
-    'dairy' : { title : 'dairy' ; 
-			heading : 'Shree balaji dairy Products'; 
+    'plant' : { title : 'Plant',
+			    heading : 'plant heading',
+			    content :'Hi! Welcome to plant. All  construction materials are avalible at best rate.'
+		    	} ,
+    'dairy' : { title : 'dairy',
+			heading : 'Shree balaji dairy Products',
 			content : 
 					`
 					Hi! Welcome to Shree balaji dairy products	. 
-					All dairy products are avalible at best rate.
-
-					`
-			; },
-    'tutor' : { title : 'tutor' ; 
-			heading : 'Shree balaji computer center'; 
+					All dairy products are avalible at best rate.`
+},
+    'tutor' : { title : 'tutor' ,
+			heading : 'Shree balaji computer center',
 			content : 
 					`
 					Hi! Welcome to Shree balaji computer center	. 
 					All educational solutions are avalible at best rate.
 
 					`
-			; }
+			}
     };
 
 var plant = {
-title : 'Plant' ; 
-heading : 'Shree balaji Cement Products'; 
+title : 'Plant', 
+heading : 'Shree balaji Cement Products',
 content : 
 		`
 		Hi! Welcome to Shree balaji cement products	. 
 		All  construction materials are avalible at best rate.
 
 		`
-;}
+}
+
+/*
 
 var dairy = {
 title : 'dairy' ; 
@@ -68,13 +64,13 @@ content :
 		`
 ;}
 
-
+*/
 function CreateTemplate (data) {
 
 	var title = data.title; 
 	var heading = data.heading; 
 	var content = data.content;
-var HtmlTemplate  =  { `
+var HtmlTemplate  =  `
 <html>
     <head>
         <link href="/ui/style.css" rel="stylesheet" />
@@ -96,7 +92,7 @@ var HtmlTemplate  =  { `
     </body>
 </html>
 
-`} ;
+`;
 return HtmlTemplate ;
 }
 
