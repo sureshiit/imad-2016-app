@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
+/*
 var articles = { 
     'plant' : { title : 'Plant',
 			    heading : 'plant heading',
@@ -28,6 +28,7 @@ var articles = {
 					`
 			}
     };
+    */
 
 var plant = {
 title : 'Plant', 
@@ -40,31 +41,31 @@ content :
 		`
 }
 
-/*
+
 
 var dairy = {
-title : 'dairy' ; 
-heading : 'Shree balaji dairy Products'; 
+title : 'dairy' , 
+heading : 'Shree balaji dairy Products', 
 content : 
 		`
 		Hi! Welcome to Shree balaji dairy products	. 
 		All dairy products are avalible at best rate.
 
 		`
-;}
+}
 
 var dairy = {
-title : 'tutor' ; 
-heading : 'Shree balaji computer center'; 
+title : 'tutor' , 
+heading : 'Shree balaji computer center', 
 content : 
 		`
 		Hi! Welcome to Shree balaji computer center	. 
 		All educational solutions are avalible at best rate.
 
 		`
-;}
+}
 
-*/
+
 function CreateTemplate (data) {
 
 	var title = data.title; 
@@ -99,14 +100,15 @@ return HtmlTemplate ;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-
+/*
 app.get( '/:articleName', function (req, res) {	
 
 var articleName = req.params.articleName ;
 
  res.send( CreateTemplate ( articles[articleName] ) );
 });
-/*
+*/
+
 app.get( '/plant', function (req, res) {	
  res.send( CreateTemplate ( plant ) );
 });
@@ -120,7 +122,7 @@ app.get( '/tutor', function (req, res) {
 // res.sendFile(path.join(__dirname, 'ui', 'tutor.html'));
 res.send( CreateTemplate ( tutor ) );
 });
-*/ 
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
