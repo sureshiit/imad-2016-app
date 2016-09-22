@@ -7,15 +7,14 @@ app.use(morgan('combined'));
 
 
 var articles = { 
-    'plant' :   { title : 'Plant' ; 
-			heading : 'Shree balaji Cement Products'; 
-			content : 
-			`
-			Hi! Welcome to Shree balaji cement products	. 
-			All  construction materials are avalible at best rate.
-
-			`
-			; } ,
+    'plant' : { title : 'Plant' ; 
+			    heading : 'Shree balaji Cement Products'; 
+			    content : 
+			    `
+			    Hi! Welcome to Shree balaji cement products	. 
+			    All  construction materials are avalible at best rate.
+		    	`
+			    ; } ,
     'dairy' : { title : 'dairy' ; 
 			heading : 'Shree balaji dairy Products'; 
 			content : 
