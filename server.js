@@ -8,10 +8,10 @@ app.use(morgan('combined'));
 
 var articles = { 
     'plant' : { title : 'Plant' ; 
-			    heading : 'Shree balaji Cement Products'; 
+			    heading : 'plant heading'; 
 			    content : 
 			    `
-			    Hi! Welcome to Shree balaji cement products	. 
+			    Hi! Welcome to plant	. 
 			    All  construction materials are avalible at best rate.
 		    	`
 			    ; } ,
