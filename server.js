@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 
 var articles = { 
-'plant' : { itle : 'Plant' ; 
+'plant' : { title : 'Plant' ; 
 			heading : 'Shree balaji Cement Products'; 
 			content : 
 			`
