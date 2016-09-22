@@ -5,22 +5,130 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+
+var articles = { 
+'plant' : { itle : 'Plant' ; 
+			heading : 'Shree balaji Cement Products'; 
+			content : 
+			`
+			Hi! Welcome to Shree balaji cement products	. 
+			All  construction materials are avalible at best rate.
+
+			`
+			; } ,
+
+'dairy' : { title : 'dairy' ; 
+			heading : 'Shree balaji dairy Products'; 
+			content : 
+					`
+					Hi! Welcome to Shree balaji dairy products	. 
+					All dairy products are avalible at best rate.
+
+					`
+			; },
+'tutor' : { title : 'tutor' ; 
+			heading : 'Shree balaji computer center'; 
+			content : 
+					`
+					Hi! Welcome to Shree balaji computer center	. 
+					All educational solutions are avalible at best rate.
+
+					`
+			; }
+
+
+};
+
+var plant = {
+title : 'Plant' ; 
+heading : 'Shree balaji Cement Products'; 
+content : 
+		`
+		Hi! Welcome to Shree balaji cement products	. 
+		All  construction materials are avalible at best rate.
+
+		`
+;}
+
+var dairy = {
+title : 'dairy' ; 
+heading : 'Shree balaji dairy Products'; 
+content : 
+		`
+		Hi! Welcome to Shree balaji dairy products	. 
+		All dairy products are avalible at best rate.
+
+		`
+;}
+
+var dairy = {
+title : 'tutor' ; 
+heading : 'Shree balaji computer center'; 
+content : 
+		`
+		Hi! Welcome to Shree balaji computer center	. 
+		All educational solutions are avalible at best rate.
+
+		`
+;}
+
+
+function CreateTemplate (data) {
+
+	var title = data.title; 
+	var heading = data.heading; 
+	var content = data.content;
+var HtmlTemplate  =  { `
+<html>
+    <head>
+        <link href="/ui/style.css" rel="stylesheet" />
+        <title
+        	${title}
+        </title>
+    </head>
+    <body>
+
+        <br>
+        <h3>
+ 			${heading}
+        </h3>
+        <div class="center text-big bold">
+           ${content}
+        </div>
+        <script type="text/javascript" src="/ui/main.js">
+        </script>
+    </body>
+</html>
+
+`} ;
+return HtmlTemplate ;
+}
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+app.get( '/:articleName', function (req, res) {	
+
+var articleName = req.params.articleName ;
+
+ res.send( CreateTemplate ( articles[articleName] ) );
+});
+`
 app.get( '/plant', function (req, res) {	
- res.sendFile(path.join(__dirname, 'ui', 'plant.html'));
+ res.send( CreateTemplate ( plant ) );
 });
 
 app.get( '/dairy', function (req, res) {	
- res.sendFile(path.join(__dirname, 'ui', 'dairy.html'));
+ //res.sendFile(path.join(__dirname, 'ui', 'dairy.html'));
+ res.send( CreateTemplate ( dairy ) );
 });
 
 app.get( '/tutor', function (req, res) {	
- res.sendFile(path.join(__dirname, 'ui', 'tutor.html'));
+// res.sendFile(path.join(__dirname, 'ui', 'tutor.html'));
+res.send( CreateTemplate ( tutor ) );
 });
-
+`
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
