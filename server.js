@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 
 var articles = { 
-'plant' : { title : 'Plant' ; 
+    'plant' :   { title : 'Plant' ; 
 			heading : 'Shree balaji Cement Products'; 
 			content : 
 			`
@@ -16,8 +16,7 @@ var articles = {
 
 			`
 			; } ,
-
-'dairy' : { title : 'dairy' ; 
+    'dairy' : { title : 'dairy' ; 
 			heading : 'Shree balaji dairy Products'; 
 			content : 
 					`
@@ -26,7 +25,7 @@ var articles = {
 
 					`
 			; },
-'tutor' : { title : 'tutor' ; 
+    'tutor' : { title : 'tutor' ; 
 			heading : 'Shree balaji computer center'; 
 			content : 
 					`
@@ -35,9 +34,7 @@ var articles = {
 
 					`
 			; }
-
-
-};
+    };
 
 var plant = {
 title : 'Plant' ; 
