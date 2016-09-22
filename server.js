@@ -106,7 +106,7 @@ var articleName = req.params.articleName ;
 
  res.send( CreateTemplate ( articles[articleName] ) );
 });
-`
+/*
 app.get( '/plant', function (req, res) {	
  res.send( CreateTemplate ( plant ) );
 });
@@ -120,7 +120,7 @@ app.get( '/tutor', function (req, res) {
 // res.sendFile(path.join(__dirname, 'ui', 'tutor.html'));
 res.send( CreateTemplate ( tutor ) );
 });
-`
+*/ 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
