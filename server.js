@@ -44,7 +44,7 @@ heading : 'Shree balaji dairy Products',
 content : 'Hi! Welcome to Shree balaji dairy products	. All dairy products are avalible at best rate.',
 }
 
-var dairy = {
+var tutor = {
 title : 'tutor' , 
 heading : 'Shree balaji computer center', 
 content : 'Hi! Welcome to Shree balaji computer center	.  All educational solutions are avalible at best rate.'
@@ -67,7 +67,6 @@ var HtmlTemplate  =  `
     </head>
     <body>
 
-        <br>
         <h3>
  			${heading}
         </h3>
